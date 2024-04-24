@@ -1,0 +1,41 @@
+{
+ "add_total_row": 0,
+ "columns": [
+  {
+   "fieldname": "add_on_type",
+   "fieldtype": "Link",
+   "label": "Add-On Type",
+   "options": "Airplane Ticket Add-on Type",
+   "width": 0
+  },
+  {
+   "fieldname": "sold count",
+   "fieldtype": "Int",
+   "label": "Sold Count",
+   "width": 0
+  }
+ ],
+ "creation": "2024-04-18 17:23:39.144466",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2024-04-18 17:28:08.111371",
+ "modified_by": "Administrator",
+ "module": "Indianairplane",
+ "name": "Add-on Popularity",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT `item`, COUNT(*) as `Sold_Count`\nFROM `tabAirplane Ticket Add-on Item`\nGROUP BY `item`\nORDER BY `Sold_Count` DESC;\n",
+ "ref_doctype": "Airplane Ticket Add-on Type",
+ "report_name": "Add-on Popularity",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ]
+}
